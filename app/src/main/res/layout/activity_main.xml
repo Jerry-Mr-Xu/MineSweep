@@ -4,9 +4,10 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.jerry.minesweep.MainActivity">
+    tools:context="com.example.jerry.minesweep.view.MainActivity">
 
     <GridView
+        android:id="@+id/gv_board"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
