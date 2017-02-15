@@ -118,7 +118,7 @@ public class BoardModel
 			cube[i] = temp;
 
 			// 生成地雷
-			cubes[cube[randomPos] / columnNum][cube[randomPos] % columnNum] = new CubeBean(-1);
+			cubes[cube[i] / columnNum][cube[i] % columnNum] = new CubeBean(-1);
 		}
 	}
 }

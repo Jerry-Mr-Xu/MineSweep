@@ -1,11 +1,13 @@
 package com.example.jerry.minesweep.present;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 
 import com.example.jerry.minesweep.R;
 import com.example.jerry.minesweep.bean.CubeBean;
@@ -65,14 +67,30 @@ public class BoardGridAdapter extends BaseAdapter
 		{
 			// 如果格子被打开，则不可再点击
 			convertView.setEnabled(false);
+			((CheckBox) convertView).setOnCheckedChangeListener(null);
 			// 显示选中状态
 			((CheckBox) convertView).setChecked(true);
 
 			if (cubes[rowPos][columnPos].getFlag() != 0)
 			{
-				// 如果格子周围有地雷，则显示标识
+				// 如果格子周围有地雷或格子本身为地雷，则显示标识
+				((CheckBox) convertView).setTextColor(Color.BLACK);
 				((CheckBox) convertView).setText(String.format(Locale.CHINA, "%d", cubes[rowPos][columnPos].getFlag()));
 			}
+		}
+		else
+		{
+			((CheckBox) convertView).setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
+			{
+				@Override
+				public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
+				{
+					if (isChecked)
+					{
+						// TODO 点击格子
+					}
+				}
+			});
 		}
 		return convertView;
 	}

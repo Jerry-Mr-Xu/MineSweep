@@ -2,6 +2,7 @@ package com.example.jerry.minesweep.view;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.GridView;
 
 import com.example.jerry.minesweep.R;
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements MainInterface
 	private void initView()
 	{
 		gvBoard = (GridView) findViewById(R.id.gv_board);
+		gvBoard.setNumColumns(columnNum);
 		present = new MainPresent(this);
 		present.initBoard();
 	}
