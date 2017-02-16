@@ -2,13 +2,12 @@ package com.example.jerry.minesweep.view;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.GridView;
 
 import com.example.jerry.minesweep.R;
 import com.example.jerry.minesweep.bean.BoardBean;
-import com.example.jerry.minesweep.present.BoardGridAdapter;
-import com.example.jerry.minesweep.present.MainPresent;
+import com.example.jerry.minesweep.presenter.BoardGridAdapter;
+import com.example.jerry.minesweep.presenter.MainPresent;
 
 public class MainActivity extends AppCompatActivity implements MainInterface
 {
@@ -66,5 +65,11 @@ public class MainActivity extends AppCompatActivity implements MainInterface
 	{
 		adapter = new BoardGridAdapter(this, boardBean.getCubeBeans(), boardBean.getRowNum() * boardBean.getColumnNum(), boardBean.getColumnNum());
 		gvBoard.setAdapter(adapter);
+	}
+
+	@Override
+	public void openCube(int cubeRow, int cubeColumn)
+	{
+
 	}
 }

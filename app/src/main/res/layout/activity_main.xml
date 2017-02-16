@@ -14,6 +14,7 @@
         android:clipChildren="false"
         android:clipToPadding="false"
         android:columnWidth="50dp"
+        android:verticalSpacing="5dp"
         android:padding="10dp"
         android:stretchMode="spacingWidth" />
 

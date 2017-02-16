@@ -18,7 +18,7 @@ public class CubeBean implements Serializable
 	public CubeBean(int flag)
 	{
 		this.flag = flag;
-		this.isOpened = true;
+		this.isOpened = false;
 	}
 
 	public int getFlag()

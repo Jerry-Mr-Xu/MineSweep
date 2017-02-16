@@ -17,4 +17,6 @@ public interface MainInterface
 	int getMineNum();
 
 	void showBoard(BoardBean boardBean);
+
+	void openCube(int cubeRow, int cubeColumn);
 }

@@ -1,4 +1,4 @@
-package com.example.jerry.minesweep.present;
+package com.example.jerry.minesweep.presenter;
 
 import android.content.Context;
 import android.graphics.Color;
