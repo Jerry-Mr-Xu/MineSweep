@@ -51,7 +51,7 @@ public class MainPresent
 
 		BoardBean boardBean = new BoardBean(rowNum, columnNum, mineNum, cubes);
 
-
+		boardModel.saveBoard(boardBean);
 		mainView.showBoard(boardBean);
 	}
 
